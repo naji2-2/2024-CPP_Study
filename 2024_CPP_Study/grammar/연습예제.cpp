@@ -1,8 +1,8 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
 int main(void)
 {
-	//�ּ� �׽�Ʈ
+	//주석 테스트
 	printf("Hello World! \n");
 	return 0;
 }
