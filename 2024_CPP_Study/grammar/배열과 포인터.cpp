@@ -8,9 +8,9 @@ int main(void)
 	char str[4] = "abc";
 
 	// 주소값 4 바이트 만큼의 차이
-	printf("%p %p \n", &arr[0], &arr[1]);
+	printf("%p %p \n", arr[0], arr[1]);
 	// 주소값 1 바이트 만큼의 차이
-	printf("%p %p \n", arr+0, arr+1);
+	printf("%p %p \n", *(arr+0), *(arr+1));
 
 	return 0;
 
