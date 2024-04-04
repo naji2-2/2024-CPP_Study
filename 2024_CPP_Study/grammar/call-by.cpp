@@ -2,19 +2,17 @@
 
 using namespace std;
 
-int int_mul(int a, int b)
+void call_by_reference(int& val)
 {
-	return a * b;
-}
-
-float float_mul(float a, float b)
-{
-	return a * b;
+	// 새로운 지역변수 val을 만들고 값을 넣는다.
+	val = 10;
 }
 
 int main(void)
 {
-	cout << int_mul(2, 2) << endl;
-	cout << float_mul(2.2f 2.2f) << endl;
+	int num = 4;
+	// num의 값은 바뀐다.
+	call_by_reference(num);
+	cout << num;
 	return 0;
 }
