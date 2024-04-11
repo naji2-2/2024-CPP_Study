@@ -9,7 +9,9 @@ public:
 	// 생성자는 반환형이 없다.
 	Student()
 	{
-		hakbun_ = 2222;
+		// this : 자기 자신을 가리키는 포인터
+		// 멤버변를 명확하게 가리킬 수 있다.
+		this->hakbun_ = 2222;
 		name_ = "mirim";
 	}
 
