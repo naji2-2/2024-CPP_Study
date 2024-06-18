@@ -12,6 +12,11 @@ public:
 	}
 
 	~C() {
+
+	}
+
+	void print_Show()
+	{
 		cout << "포인터" << g_pointer_ << endl;
 		cout << "구조체" << g_structure_ << endl;
 		cout << "stdio" << I_stdio_ << endl;
@@ -20,8 +25,15 @@ public:
 		cout << "반복문" << g_for_ << endl;
 	}
 
-	void print_Show()
+	// C언어의 동적할당
+	int* dynamic_allocation_int()
 	{
+		int* ptr = (int*)malloc(sizeof(int));
+		return ptr;
+	}
+
+	void free_dynamic_allocation_int(int* ptr) {
+		free(ptr);
 
 	}
 
@@ -52,6 +64,16 @@ public:
 		cout << "포인터" << g_class_ << endl;
 		cout << "구조체" << g_inheritance_ << endl;
 		cout << "stdio" << g_reference_ << endl;
+	}
+
+	int* dynamic_allocation_int()
+	{
+		int* ptr = new int;
+		return ptr;
+	}
+
+	void free_dynamic_allocation_int(int* ptr) {
+		delete ptr;
 	}
 
 private:
