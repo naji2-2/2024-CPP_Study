@@ -87,6 +87,11 @@ int main()
         paddle.update();
         ball.update();
 
+        // 공과 패들과의 충돌처리
+        if (ball.shape.getGlovalBounds().intersects(paddle.shape.getGlocalBounds())) {
+            ball.velocity.y = -ball.velocity.y
+        }
+
         // draw
         // 화면 지우기
         window.clear(sf::Color::White);
