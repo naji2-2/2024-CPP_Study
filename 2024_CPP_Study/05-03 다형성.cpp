@@ -5,6 +5,11 @@ using namespace std;
 
 class Animal {
 public:
+	Animal(string name, unsigned int age, int leg_num) 
+		: name_(name), age_(age), leg_num_(leg_num)
+	{
+		cout << "Animal »ý¼ºÀÚ È£Ãâ" << endl;
+	}
 	void walk(void)
 	{
 		cout << "°È´Ù" << endl;
@@ -21,12 +26,12 @@ public:
 private:
 	string name_;
 	unsigned int age_;
-	int leg_num;
+	int leg_num_;
 
 };
 
 void main(void) {
-	Animal* animal = new Animal();
+	Animal* animal = new Animal("³ó´ã°õ", 4, 2);
 	animal -> bark();
 	animal -> eat();
 	animal -> walk();
