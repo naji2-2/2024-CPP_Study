@@ -39,17 +39,16 @@ public:
 	{
 		cout << "충성도 " << loyalty << endl;
 	}
-
-	// C++은 default가 정적 바인딩이기 때문에 가상함수로 오버라이딩해야한다.
-	void walk(void)
+	
+	virtual void walk(void)
 	{
 		cout << "촵촵촵촵" << endl;
 	}
-	void bark(void)
+	virtual void bark(void)
 	{
 		cout << "woof woof" << endl;
 	}
-	void eat(void)
+	virtual void eat(void)
 	{
 		cout << "왕~" << endl;
 	}
