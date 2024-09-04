@@ -28,17 +28,25 @@ class Kimchi : public FoodKingdom{
 public:
 	Kimchi(int civil, int force, string name, int territory, int garlic, int pepper) 
 		: FoodKingdom(civil, force, name, territory), garlic_(garlic), pepper_(pepper)
-	{}
+	{
+		ca_ = 0;
+	}
 	void show() {
 		FoodKingdom::show();
 		cout << "마늘 : " << garlic_ << endl;
 		cout << "고추 : " << pepper_ << endl;
 	}
+
+	// 3번 공격할때마다 크리티컬 데미지를 주기
 	void attack(FoodKingdom* target) override
 	{
-		target->force_ -= this->force_ * 2;
+		ca_++;
+		if (ca_ % 3 == 0)
+			target->force_ -= this->force_ * 20;
+		else
+			target->force_ -= this->force_ * 2;
 	}
-
+	int ca_ = 0;
 	int garlic_; // 마늘
 	int pepper_; // 고추
 };
