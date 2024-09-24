@@ -27,16 +27,8 @@ void main(void)
 	v[5] = 500;
 	cout << v[5] << endl << endl;
 
-	// 크기
-	for (int i = 0; i < v.size(); i++) {
-		cout << v[i] << endl;
-	}
-
-	// 끝의 값 제거
-	v.pop_back();
-	v.pop_back();
-
-	for (int i = 0; i < v.size(); i++) {
-		cout << v[i] << endl;
-	}
+	// 반복자(iterator)
+	vector<long long>::iterator iter;
+	for (iter = v.begin(); iter != v.end(); iter++)
+		cout << *iter << endl;
 }
