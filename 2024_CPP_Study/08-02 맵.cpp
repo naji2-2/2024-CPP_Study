@@ -12,9 +12,13 @@ void main(void)
 	money["熱綴"] = 300;
 	money["團摹"] = 1000;
 
+	int a;
+	int* b = &a;
+	auto c = b;
+
 	// 奩犒濠
-	map<string, long long>::iterator iter;
-	for (iter = money.begin(); iter != money.end(); iter++)
+	// map<string, long long>::iterator iter;
+	for (auto iter = money.begin(); iter != money.end(); iter++)
 		cout << iter->first << "朝 " << iter->second << endl;
 
 	// 高 熱薑
