@@ -13,4 +13,10 @@ void main(void)
 		cout << v[i] << endl;
 	}
 
+	// 범위기반 for문
+	for (int value : v)
+	{
+		cout << value << endl;
+	}
+
 }
