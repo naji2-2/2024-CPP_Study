@@ -3,9 +3,12 @@
 using namespace sf;
 using namespace std;
 
+#define WINDOW_WHDTH	1200
+#define WINDOW_HEIGHT	700
+
 void main(void)
 {
-	RenderWindow window(VideoMode(1200, 700), "ShootingG");
+	RenderWindow window(VideoMode(WINDOW_WHDTH, WINDOW_HEIGHT), "ShootingG");
 
 	while (window.isOpen()) {
 		Event event;
