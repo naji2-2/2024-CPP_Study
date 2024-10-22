@@ -11,6 +11,7 @@ enum App {
 void main(void)
 {
 	RenderWindow window(VideoMode(App::WHDTH, App::HEIGHT), "ShootingG");
+	window.setFramerateLimit(60);
 
 	RectangleShape player;
 	player.setSize(Vector2f(165.f, 62.f));
